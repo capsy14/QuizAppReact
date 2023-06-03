@@ -1,0 +1,21 @@
+Navbar styles
+.kl {
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  Link styles
+  nav a {
+    margin-right: 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  nav a.active {
+    font-weight: bold;
+  }
+  

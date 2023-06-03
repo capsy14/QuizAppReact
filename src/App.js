@@ -1,25 +1,29 @@
 import logo from './logo.svg';
+import { RouterProvider, createBrowserRouter, createRoutesFromElements, Routes, Route, BrowserRouter } from "react-router-dom"
 import './App.css';
-
+import Home from './components/Home';
+// import About from './components/Login';
+import Navbar from './components/Navbar';
+import Login from './components/Login';
+import QuizApp from './components/QuizApp'
+// const router = createBrowserRouter(createRoutesFromElements(
+//   <>
+//     <Route path='/' element={<Home />} />
+//     <Route path='/about' element={<About />} />
+//   </>
+// ));
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <BrowserRouter>
+      <Routes>
+      {/* <Route path='/' element={<Navbar/>}> */}
+        <Route index element={<Home/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/quizapp' element={<QuizApp/>}/>
+      {/* </Route> */}
+      </Routes>
+      </BrowserRouter>
+  )
 }
 
 export default App;
